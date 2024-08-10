@@ -1,7 +1,6 @@
 from locust import HttpUser, TaskSet, task, between
 
 class SearchTests(TaskSet):
-
     @task
     def search(self):
         searchwords = ["ayakkabı", "bilgisayar", "defter", "kumanda", "buzdolabı"]
@@ -10,7 +9,7 @@ class SearchTests(TaskSet):
         }
 
         for word in searchwords:
-            with self.client.get(f"/arama?q={word}", headers=headers, catch_response=True) as response:t
+            with self.client.get(f"/arama?q={word}", headers=headers, catch_response=True) as response:
                 if response.status_code == 200 and "arama" in response.url:
                     if word in response.text:
                         response.success()
