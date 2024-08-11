@@ -30,8 +30,8 @@ The test script performs the following tasks:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/n11-load-test.git
-   cd n11-load-test
+   git clone https://github.com/agkocaman/LoadTestIns.git
+   cd LoadTestIns
    ```
 
 2. Install the required Python packages:
@@ -44,7 +44,7 @@ The test script performs the following tasks:
 To run the load test, use the following command:
 
 ```sh
-locust -f search_test.py
+locust -f search_load.py
 ```
 
 Then, open your browser and go to `http://localhost:8089` to start the test.
